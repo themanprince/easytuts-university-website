@@ -1,0 +1,456 @@
+/*font declaration*/
+@font-face {
+	font-family: "Hubballi";
+	src: url("Hubballi-Regular.woff") format("woff");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Hubballi';
+}
+.header {
+	min-block-size: 100vh;
+	inline-size: 100%;
+	background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('images/banner.png');
+	background-position: center;
+	background-size: 100vw 100vh;
+	background-repeat: no-repeat;
+}
+
+nav {
+	/*the spacing and layout*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	inline-size: 90vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2% 6%;
+}
+
+.logo {
+	inline-size: 150px;
+}
+.logo > img {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: contain;
+}
+/*dem menuitems*/
+.menuitems {
+	display: flex;
+}
+.menuitems > ul {
+	list-style-type: none;
+}
+.menuitems > ul li {
+	padding: 8px 12px;
+	font-size: 13px;
+	font-family: sans-serif;
+	display: inline-block;
+}
+.menuitems > ul li a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+.menuitems ul li a::after {
+	content: '';
+	inline-size: 0;
+	block-size: 2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: .3s;
+}
+
+.menuitems a:link {
+
+}
+.menuitems a:visited {
+
+}
+.menuitems a:focus {
+}
+.menuitems a:active {
+
+}
+.menuitems ul li a:hover::after {
+	inline-size: 100%;
+}
+/*Next, em texts styling*/
+.texts {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	inline-size: 90%;
+}
+.texts h1 {
+	font-size: 62px;
+	font-weight: bold;
+	color: white;
+	font-family: sans-serif;
+}
+.texts div{
+	color: white;
+}
+.texts div span {
+	display: inline-block;
+	margin-block: 20px;
+}
+.texts div a {
+	display: block;
+	border: 1px solid white;
+	padding: 10px;
+	inline-size: 200px;
+	margin: 0 auto;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+	transition: 1s;
+}
+.texts div a:hover {
+	background-color: #f44336;
+	border: 1px solid #f44336;
+
+}
+/*tryna hide em font awesome stuffs in full screen*/
+nav .fas {
+	display: none;
+}
+
+
+.courses-container {
+	display: grid;
+	grid-template-areas:
+		"head"
+		"items"
+	;
+	grid-row-gap: 20px;
+}
+.courses-container div:nth-child(1)[me] {
+	grid-template-area: head;
+	margin-inline: auto;
+	margin-block-start: 70px;
+	text-align: center;
+}
+.course-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	inline-size: 85vw;
+	margin: 0 auto;
+}
+.course-items div {
+	margin: 30px;
+	text-align: center;
+	padding-inline: 10px;
+	padding-block: 20px;
+	background-color: #FEF3F3;
+}
+small {
+	opacity: .6;
+	font-size: 18px;
+}
+/*wanna override one property with cascade property*/
+.course-items div[class] > div {
+	margin: 0;
+	opacity: .6;
+}
+.course-items .item1 {
+	flex: 1 150px;
+}
+.course-items .item2 {
+	flex: 1 150px;
+}
+.course-items .item3 {
+	flex: 1 150px;
+}
+div[me] h2 {
+	font-size: 40px;
+}
+.course-items div[class]:hover {
+	box-shadow: 0px 0px 5px 0px black;
+	transition: .5s;
+}
+/*Next, the campus section*/
+.campus {
+	text-align: center;
+	margin-block-start: 30px;
+}
+.campus h2 {
+	font-size: 40px;
+}
+.campus p {
+	font-size: 18px;
+	color: #777;
+	margin-block: 15px;
+	margin-block-end: 50px;
+}
+.campus-images {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	inline-size: 80vw;
+	margin: 0 auto;
+}
+.campus-images .image {
+	flex: 1;
+	block-size: 400px;
+	margin-inline: 20px;
+	padding: 0;
+	border-radius: 20px 20px;
+	position: relative; /*this is to allow us stack shit inside this div... by using absolute positioning with top and left set to 0*/
+	overflow: hidden;
+}
+.campus-images img {
+	object-fit: cover;
+	block-size: 100%;
+	inline-size: 100%;
+	border-radius: 20px 20px;
+}
+/*layer is for them red layers over my images in the campus sections*/
+.layer {
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	background-color: transparent;
+	border-radius: 20px 20px;
+	transition: .5s;
+}
+.layer:hover {
+	background-color: rgba(226, 0, 0, .7);
+}
+.layer h3 {
+	inline-size: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	font-size: 26px;
+	transition: .5s;
+	opacity: 0; /*so that it'll be invisible while at the bottom*/
+}
+.layer:hover h3 { /*e shock you too abi.. but if you reason am sha, e make sense*/
+	bottom: 50%;
+	opacity: 1;
+}
+
+
+/*the facilities side*/
+.facilities {
+	inline-size: 80vw;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+.facilities h2 {
+	font-size: 40px;
+}
+.row {
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+}
+.facilities-col {
+	flex: 1;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+	margin-inline: 20px;
+}
+.facilities-col h3 {
+	margin-block: 10px;
+}
+.facilities-col img {
+	inline-size: 100%;
+	border-radius: 10px;
+}
+
+/*testimonials section*/
+.testimonials {
+	inline-size: 80vw;
+	margin: auto;
+	padding-top: 20px;
+	text-align: center;
+}
+.testimonials p[first] {
+	margin-block-end: 30px;
+}
+.testimonials p {
+	color: black;
+	opacity: .5;
+}
+.testimonials h2 {
+	font-size: 40px;
+	margin-block-end: 20px;
+}
+.comments-container {
+	display: flex;
+	align-items: block-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.a-comment {
+	flex-basis: 44%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+	background: #fff3f3;
+	padding: 25px;
+	cursor: pointer;
+	display: flex;
+}
+.a-comment img {
+	block-size: 40px;
+	margin-inline-start: 5px;
+	margin-inline-end: 30px;
+	border-radius: 50%;
+}
+.a-comment i {
+	color: #f44336;
+	font-size: 10px;
+	margin-block-start: 10px;
+}
+
+/*call-to-action section*/
+.call-to-action {
+	margin-block: 40px;
+	margin-inline: auto;
+	inline-size: 80vw;
+	text-align: center;
+	background-image: linear-gradient(rgb(0, 0, 0, .8), rgb(0, 0, 0, .8)), url('images/banner2.jpg');
+	background-size: cover;
+	background-position: center;
+	background-color: rgba(0, 0, 0, 1);
+	border-radius: 10px;
+	padding: 25px;
+}
+.call-to-action h2 {
+	color: #fff;
+	font-size: 40px;
+	margin-block-start: 40px;
+}
+.call-to-action a {
+	display: inline-block;
+	margin-block: 30px;
+	padding-block: 15px;
+	padding-inline: 30px;
+	color: white;
+	text-decoration: none;
+	border: 1px solid #fff;
+	transition: 1s;
+}
+.call-to-action a:hover {
+	background-color: #f44336;
+	border: 1px solid #f44336;
+}
+
+/*footer section*/
+.footer {
+	text-align: center;
+	margin: 0 auto;
+	inline-size: 50%;
+}
+.footer h4 {
+	margin-block: 40px;
+}
+.footer p {
+	margin-block-end: 20px;
+}
+.footer a i {
+	color: #f44336;
+	margin: 0 13px;
+	font-size: 15px;
+}
+.footer a:hover i {
+	font-size: 30px;
+	position: relative;
+	
+}
+
+
+
+
+
+
+@media(max-width: 864px) {
+	.texts h1 {
+		font-size: 40px;
+		font-weight: bold;
+		color: white;
+		font-family: sans-serif;
+	}	
+}
+@media(max-width: 604px) { /*dem smaller widths*/
+	.texts h1 {
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+		font-family: sans-serif;
+	}
+
+	.menuitems ul li {
+		display: block;
+	}
+	.menuitems {
+		position: absolute;
+		background: #f44336;
+		block-size: 100vh;
+		inline-size: 200px;
+		top: 0;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		/*transitions for the dropdown*/
+		transition: 1s;
+	}
+	.menuitems ul li a::after {
+		content: none;
+	}
+	/*making em fa icons show here*/
+	nav .fas {
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.menuitems ul {
+		padding-block: 30px;
+		padding-inline: 0;
+	}
+
+	.campus-images {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	inline-size: 80vw;
+	margin: 0 auto;
+	}
+	.campus-images .image {
+		margin-block-end: 20px;
+	}
+
+	.row {
+		margin-top: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.call-to-action h2 {
+		font-size: 30px;
+	}
+
+
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="../../../Resources/fontawesome-free-5.15.4-web/css/all.css">
+		<link rel="stylesheet" href="style.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<!-- The header first -->
+		<section class="header">
+			<nav>
+				<div class="logo">
+					<img src="images/logo.png">
+				</div>
+				<div class="menuitems" id="menu-items">
+				<i class="fas fa-times" onclick="hideMenu()"></i>
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">ABOUT</a></li>
+						<li><a href="#">COURSE</a></li>
+						<li><a href="#">BLOG</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</div>
+				<i class="fas fa-bars" onclick="showMenu()"></i>
+			</nav>
+
+			<!-- The text in the header-->
+			<div class="texts">
+				<h1>World's biggest University</h1>
+				<div>
+					<!-- I'm using this one to group all the elements with the same font size-->
+					<span>Making websites is now one of the easiest things in the world. You just need to know HTML, CSS,<br>
+					Javascript and you are good to go.</span>
+
+					<a class="visit-us" href="#">Visit us to know more.</a>
+				</div>
+			</div>
+		</section>
+		
+		<!-- THe JS for the dropdown in responsive mode -->
+		<script src="script.js"></script>
+
+
+		<!-- Next, the courses section -->
+		<section class="courses-container">
+			<div me><h2>Courses we offer</h2><br>
+				<small>Lorem ipsum dolor sit amet, consecteur adpiscing elit</small>
+			</div>
+			<div class="course-items">
+				<div class="item1">
+					<h4>Intermediate</h4>
+					<div>Lorem ipsum dolor sit amet, consecteur adpiscing elit Lorem ipsum dolor sit amet, consecteur adpiscing elit Lorem ipsum dolor sit amet, consecteur adpiscing elit</div>
+				</div>
+
+				<div class="item2">
+					<h4>Degree</h4>
+					<div>Lorem ipsum dolor sit amet, consecteur adpiscing elit Lorem ipsum dolor sit amet, consecteur adpiscing elit Lorem ipsum dolor sit amet, consecteur adpiscing elit</div>
+				</div>
+
+				<div class="item3">
+					<h4>Post Graduation</h4>
+					<div>Lorem ipsum dolor sit amet, consecteur adpiscing elit Lorem ipsum dolor sit amet, consecteur adpiscing elit Lorem ipsum dolor sit amet, consecteur adpiscing elit</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Next, the campuses section -->
+		<section class="campus">
+			<h2>Our Global Campus</h2>
+			<p>Lorem ipsum dolor sit amet, consecteur adpiscing elit</p>
+			<div class="campus-images">
+				<div class="image"><img src="images/london.png">
+					<div class="layer"><h3>LONDON</h3></div>
+				</div>
+				<div class="image"><img src="images/newyork.png">
+					<div class="layer"><h3>NEW YORK</h3></div>
+				</div>
+				<div class="image"><img src="images/washington.png">
+					<div class="layer"><h3>WASHINGTON</h3></div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!--- facilities section-->
+		<section class="facilities">
+			<h2>Our Facilities</h2>
+			<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit</p>
+
+			<div class="row">
+				<div class="facilities-col">
+					<img src="images/library.png">
+					<h3>World class Library</h3>
+					<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Lorem ipsum dolor sit amet, consecteur adipiscing elit</p>
+				</div>
+				<div class="facilities-col">
+					<img src="images/basketball.png">
+					<h3>Largest playground</h3>
+					<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Lorem ipsum dolor sit amet, consecteur adipiscing elit</p>
+				</div>
+				<div class="facilities-col">
+					<img src="images/cafeteria.png">
+					<h3>Tasty and healthy food</h3>
+					<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Lorem ipsum dolor sit amet, consecteur adipiscing elit</p>
+				</div>
+			</div>
+		</section>
+		
+
+
+		<!-- testimonials section -->
+		<section class="testimonials">
+			<h2>What Our Students Say</h2>
+			<p first>lorem ipsum dolor sit amet, consecteur adipiscing elit</p>
+
+			<div class="comments-container">
+				<div class="a-comment">
+					<img src="images/user1.jpg">
+					<div>
+						<p class="text">Lorem ipsum dolor sit amet, consecteur adipiscing elit. Lorem ipsum dolor sit amet, consecteur adipiscing elit. Lorem ipsum dolor sit amet, consecteur adipiscing elit</p>
+						<h3 class="name">Christine Berkly</h3>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+					</div>
+				</div>
+
+				<div class="a-comment">
+					<img src="images/user2.jpg">
+					<div>
+						<p class="text">Lorem ipsum dolor sit amet, consecteur adipiscing elit. Lorem ipsum dolor sit amet, consecteur adipiscing elit. Lorem ipsum dolor sit amet, consecteur adipiscing elit</p>
+						<h3 class="name">David Byer</h3>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star-half-alt"></i>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- The call-to-action section -->
+		<section class="call-to-action">
+			<div>
+				<h2>Enroll for our online courses<br>Anywhere from the world</h2>
+				<a href="#">Contact us</a>
+			</div>
+		</section>
+
+
+		<!-- THe footer -->
+		<section class="footer">
+			<h4>About Us</h4>
+			<p>Lorem ipsum dolor sit amet, consecteur adipiscing Lorem ipsum dolor sit amet, consecteur adipiscing Lorem ipsum dolor sit amet, consecteur adipiscing Lorem ipsum <br>dolor sit amet, consecteur adipiscing</p>
+			<div class="icons">
+				<a><i class="fab fa-facebook"></i></a>
+				<a><i class="fab fa-twitter"></i></a>
+				<a><i class="fab fa-instagram"></i></a>
+				<a><i class="fab fa-linkedin"></i></a>
+			</div>
+		</section>
+	</body>
+</html>
